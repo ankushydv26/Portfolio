@@ -20,7 +20,6 @@
     "url": "https://github.com/ankushydv26/Portfolio/issues"
   },
   "dependencies": {
-    "firebase": "^8.2.3",
     "gh-pages": "^3.1.0"
   }
 }

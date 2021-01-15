@@ -47,8 +47,8 @@
                    <div id="preview-shadow"> 
                         <div id="preview">
                             
-                            <h3>What I do</h3>
-                            <p>I am Web Developer || Programmer </p>
+                            <h3> Web Developer</h3>
+                            <!-- <p> || Programmer </p> -->
                             <div class="corner" id="tl"></div>
                             <div class="corner" id="tr"></div>
                             <div class="corner" id="bl"></div>
@@ -117,24 +117,31 @@
                <div class="post">
                    <img src="images/project.png"  class="thumbnail" alt="projectPic"/>
                    <div class="post-preview">
-                       <h6 class="post-title">Title</h6>
-                       <p class="post-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit harum officiis eos explicabo fugiat libero beatae quisquam odit ratione repudiandae! Explicabo quam rerum qui veritatis nihil atque doloribus quia exercitationem.</p>
+                       <h6 class="post-title">Robo Friends</h6>
+                       <p class="post-intro">This is my first hand on  React Project.
+                           Fetching image from robohash cool robo picture and filter robo by it's name.
+                           Styling done by tachyon css library
+                       </p>
+                       <a href="https://ankushydv26.github.io/RoboFriends/" class="link-pr" target="_blank">See project</a>
                    </div>
 
                </div>
                <div class="post">
-                <img src="images/project.png"  class="thumbnail" alt="projectPic"/>
+                <img src="images/covid.png"  class="thumbnail" alt="covid-tracker"/>
                 <div class="post-preview">
-                    <h6 class="post-title">Title</h6>
-                    <p class="post-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit harum officiis eos explicabo fugiat libero beatae quisquam odit ratione repudiandae! Explicabo quam rerum qui veritatis nihil atque doloribus quia exercitationem.</p>
+                    <h6 class="post-title">Covid-tracker</h6>
+                    <p class="post-intro">Bulid a Covid-tracker, fetching api data through axios and Country wise data will show .
+                        show data  of graph </p>
+                        <a href="https://ankushydv26.github.io/tracker/" target="_blank" class="link-pr">See project</a>
                 </div>
 
             </div>
             <div class="post">
-                <img src="images/project.png"  class="thumbnail" alt="projectPic"/>
+                <img src="images/resume.png"  class="thumbnail" alt="resume"/>
                 <div class="post-preview">
-                    <h6 class="post-title">Title</h6>
-                    <p class="post-intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit harum officiis eos explicabo fugiat libero beatae quisquam odit ratione repudiandae! Explicabo quam rerum qui veritatis nihil atque doloribus quia exercitationem.</p>
+                    <h6 class="post-title">Resume</h6>
+                    <p class="post-intro">Bulid a simple resume in react js and firebase for store a feedback information </p>
+                    <a href="https://ankushydv26.github.io/CV/" target="_blank" class="link-pr">See project</a>
                 </div>
 
             </div>
@@ -144,15 +151,17 @@
     <section class="s2" id="section2">
         <div class="main-container">
           <h3 style="text-align:center"> Get in Touch</h3>
+          
           <form id="contact">
+            <div class="alert">Message is Sent</div>
               <label>Name</label>
-              <input type="text" class="input-field" id="name" name="name">
-              <label>Subject</label>
-              <input type="text" class="input-field" id="subject" name="subject">
+              <input type="text" class="input-field" id="name" name="name" required>
+              <label>Company Name</label>
+              <input type="text" class="input-field" id="company" name="Company" required>
               <label>Email Id</label>
-              <input type="text" class="input-field" id="email" name="email">
+              <input type="email" class="input-field" id="email" name="email" required>
               <label>Message</label>
-              <textarea class="input-field" id="message" name="message"></textarea>
+              <textarea class="input-field" id="message" name="message" required></textarea>
 
               <button type="submit" id="submit-btn">Send</button>
           </form>

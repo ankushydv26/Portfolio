@@ -79,24 +79,39 @@ var msgRef = firebase.database().ref('messageFromJob');
 
 function submitForum(e){
     e.preventDefault();
-    var name = getInputVal("name")
-    var subject = getInputVal("subject")
-    var email = getInputVal("email")
-    var message = getInputVal("message")
+    // var name = getInputVal("name")
+    // var subject = getInputVal("subject")
+    // var email = getInputVal("email")
+    // var message = getInputVal("message")
+    // var date = new Date()
+    let name = document.getElementById('name').value;
+    let CompanyName = document.getElementById('company').value;
+    let email = document.getElementById('email').value;
+    let message  = document.getElementById('message').value;
+
 
     // console.log()
-    saveFeed(name, email, message ,subject)
+    saveFeed(name, CompanyName ,email,message)
+
+    document.querySelector(".alert").style.display= 'block';
+    setTimeout(() => {
+        document.querySelector(".alert").style.display= 'none';
+
+    }, 3000);
+    
+    document.getElementById('contact').reset()
 }
-function saveFeed(name, subject, email , message){
+function saveFeed(name, CompanyName, email , message){
     var newMsg = msgRef.push()
     newMsg.set({
         name: name,
-        subject: subject,
+        CompanyName: CompanyName,
         email:email,
         message: message,
+        // date:new Date()
     })
 }
 
-function getInputVal(id){
-  return  document.getElementById(id).value;
-}
+// function getInputVal(id){
+//   return  document.getElementById(id).value;
+// }
