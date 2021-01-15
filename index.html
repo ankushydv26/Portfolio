@@ -37,6 +37,7 @@
                        <div data-mode="blue" class="theme-dot" id="blue-mode"></div>
                        <div data-mode="green" class="theme-dot" id="green-mode"></div>
                        <div data-mode="purple" class="theme-dot" id="purple-mode"></div>
+                       <div data-mode="gsky" class="theme-dot" id="gsky-mode"></div>
                        <!-- <div class="theme-dot" id="random-mode"></div> -->
                     </div>
                        <p id="setting-note">*Theme will be save for <br> your next vist</p>
@@ -143,20 +144,26 @@
     <section class="s2" id="section2">
         <div class="main-container">
           <h3 style="text-align:center"> Get in Touch</h3>
-          <form id="contact-form">
+          <form id="contact">
               <label>Name</label>
-              <input type="text" class="input-field" name="name">
+              <input type="text" class="input-field" id="name" name="name">
               <label>Subject</label>
-              <input type="text" class="input-field" name="Subject">
+              <input type="text" class="input-field" id="subject" name="subject">
               <label>Email Id</label>
-              <input type="text" class="input-field" name="Email Id">
+              <input type="text" class="input-field" id="email" name="email">
               <label>Message</label>
-              <textarea class="input-field" name="message"></textarea>
+              <textarea class="input-field" id="message" name="message"></textarea>
 
-              <input type="button" id="submit-btn" value="Send"/>
+              <button type="submit" id="submit-btn">Send</button>
           </form>
         </div>
     </section>
-    <script src="script.js" type="text/javascript"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+    <script src="script.js"  ></script>
+    <!-- <script src="./firbase/firebase.js" type="module"></script> -->
+
+
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script> -->
 </body>
 </html>

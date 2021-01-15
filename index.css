@@ -171,6 +171,9 @@ background-color:#192734 ;
 #green-mode{
 background-color: #78846b;
 }
+#gsky-mode{
+    background-color: #1cefff;
+}
 
 #purple-mode{
 background-color: rebeccapurple;
@@ -288,7 +291,7 @@ background-color: rebeccapurple;
     /* border-radius: 15px; */
 }
 
-#contact-form{
+#contact{
 	display: block;
 	max-width: 600px;
 	margin: 0 auto;
@@ -300,11 +303,11 @@ background-color: rebeccapurple;
 
 }
 
-#contact-form label{
+#contact label{
 	line-height: 2.7em;
 }
 
-#contact-form textarea{
+#contact textarea{
 	min-height: 100px;
 	font-size: 14px;
 }

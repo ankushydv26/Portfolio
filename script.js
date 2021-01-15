@@ -1,3 +1,5 @@
+// import firebase from "./firbase/firebase"
+
 let theme = localStorage.getItem('theme')
 
 if (theme == null){
@@ -30,7 +32,11 @@ function setTheme(mode){
     if(mode == 'purple'){
         document.getElementById('theme-style').href = 'purple.css'
     }
+    if(mode == 'gsky'){
+        document.getElementById('theme-style').href = 'gsky.css'
+    }
     localStorage.setItem('theme' , mode)
+
 }
 
 const text  ="Something something Nothing nothing!!!!! :smile:";
@@ -47,3 +53,50 @@ function typeWriter() {
   }
 }
 typeWriter()
+
+
+//firebase for contact me forum
+
+
+
+var firebaseConfig = {
+    apiKey: "AIzaSyCfAcbYhDnw01oNYdrqR3azI1upC5yCeDQ",
+    authDomain: "message-from-job.firebaseapp.com",
+    projectId: "message-from-job",
+    storageBucket: "message-from-job.appspot.com",
+    messagingSenderId: "619482372606",
+    appId: "1:619482372606:web:53a838c4cdfb72a7d908af",
+    measurementId: "G-PL5FQPLDPK"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+//   firebase.analytics();
+document.getElementById("contact").addEventListener("submit", submitForum);
+
+//Reference  message collection
+
+var msgRef = firebase.database().ref('messageFromJob');
+
+function submitForum(e){
+    e.preventDefault();
+    var name = getInputVal("name")
+    var subject = getInputVal("subject")
+    var email = getInputVal("email")
+    var message = getInputVal("message")
+
+    // console.log()
+    saveFeed(name, email, message ,subject)
+}
+function saveFeed(name, subject, email , message){
+    var newMsg = msgRef.push()
+    newMsg.set({
+        name: name,
+        subject: subject,
+        email:email,
+        message: message,
+    })
+}
+
+function getInputVal(id){
+  return  document.getElementById(id).value;
+}
