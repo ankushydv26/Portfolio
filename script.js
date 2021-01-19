@@ -60,6 +60,13 @@ typeWriter()
 
 
 var firebaseConfig = {
+     apiKey: "AIzaSyCfAcbYhDnw01oNYdrqR3azI1upC5yCeDQ",
+    authDomain: "message-from-job.firebaseapp.com",
+    projectId: "message-from-job",
+    storageBucket: "message-from-job.appspot.com",
+    messagingSenderId: "619482372606",
+    appId: "1:619482372606:web:53a838c4cdfb72a7d908af",
+    measurementId: "G-PL5FQPLDPK"
    
 };
 // Initialize Firebase
